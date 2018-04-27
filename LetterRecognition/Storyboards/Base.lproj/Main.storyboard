@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LetterRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SWR-Zl-I9U">
+                                <rect key="frame" x="16" y="73.5" width="343" height="504.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавьте фото с буквой" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dec-vj-rxI">
+                                <rect key="frame" x="16" y="36" width="343" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xtj-aR-V8O">
+                                <rect key="frame" x="16" y="593" width="343" height="58"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXa-8f-yNz">
+                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="58"/>
+                                        <color key="backgroundColor" red="0.99934309720993042" green="0.67420345544815063" blue="0.0072066173888742924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Добавить фото">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addPhotoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tPZ-pC-bIL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3f-vz-8le">
+                                        <rect key="frame" x="179.5" y="0.0" width="163.5" height="58"/>
+                                        <color key="backgroundColor" red="0.69270908832550049" green="0.92171519994735718" blue="0.0051212082616984844" alpha="0.48103060787671231" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Распознать">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="recognizeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ix7-wW-0DR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32380172610282898" green="0.7336609959602356" blue="0.95856183767318726" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xtj-aR-V8O" firstAttribute="top" secondItem="SWR-Zl-I9U" secondAttribute="bottom" constant="15" id="5EM-9x-1rv"/>
+                            <constraint firstItem="SWR-Zl-I9U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5e2-ir-xRY"/>
+                            <constraint firstItem="xtj-aR-V8O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6tV-H4-86M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xtj-aR-V8O" secondAttribute="bottom" constant="16" id="FYf-TE-3K9"/>
+                            <constraint firstItem="Dec-vj-rxI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="O31-Qu-X38"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SWR-Zl-I9U" secondAttribute="trailing" constant="16" id="RgY-cs-p1X"/>
+                            <constraint firstItem="Dec-vj-rxI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="SfX-zu-TQA"/>
+                            <constraint firstItem="SWR-Zl-I9U" firstAttribute="top" secondItem="Dec-vj-rxI" secondAttribute="bottom" constant="16" id="bRY-RA-qXV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SWR-Zl-I9U" secondAttribute="bottom" constant="89" id="jpi-K4-1Qt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xtj-aR-V8O" secondAttribute="trailing" constant="16" id="lfJ-gK-I2W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dec-vj-rxI" secondAttribute="trailing" constant="16" id="zRP-rx-fat"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addPhotoButton" destination="iXa-8f-yNz" id="9Dx-d7-J6K"/>
+                        <outlet property="imageView" destination="SWR-Zl-I9U" id="tX6-4T-snW"/>
+                        <outlet property="recognizeButton" destination="I3f-vz-8le" id="EL1-f4-hs8"/>
+                        <outlet property="textLabel" destination="Dec-vj-rxI" id="QoT-0w-DvC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
